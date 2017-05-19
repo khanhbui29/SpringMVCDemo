@@ -41,7 +41,7 @@ public class VerificationController {
 	 */
 	@RequestMapping(value="/verify", method=RequestMethod.POST)
 	public ModelAndView verifyUserAnswer(@Valid @ModelAttribute("verification")Verification verification, 
-			ModelMap modelmap, BindingResult result, HttpSession session, HttpServletRequest request) {
+			BindingResult result, HttpSession session, HttpServletRequest request) {
 		logger.debug("verifyUserAnswer() is executed!");
 		
 		// make sure a question is chosen and answer is provided
